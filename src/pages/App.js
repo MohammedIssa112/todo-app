@@ -1,7 +1,7 @@
-import "./assets/App.css";
+import "../assets/App.css";
 import { useState } from "react";
 
-import ListItem from "./components/ListItem";
+import ListItem from "../components/ListItem";
 
 function formatAMPM(date) {
   var hours = date.getHours();
