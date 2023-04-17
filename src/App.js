@@ -1,7 +1,7 @@
-import "./App.css";
+import "./assets/App.css";
 import { useState } from "react";
 
-import ListItem from "./ListItem";
+import ListItem from "./components/ListItem";
 
 function formatAMPM(date) {
   var hours = date.getHours();
@@ -29,7 +29,7 @@ export default function App() {
   const [items, setItems] = useState([]);
   const [selected, setSelected] = useState(options[0].value);
 
-  const handleSelect = (e) => {
+  const handlSelect = (e) => {
     setSelected(e.target.value);
   };
   function handelAddItem() {
@@ -86,7 +86,7 @@ export default function App() {
           Add Task
         </button>
 
-        <select className="select" value={selected} onChange={handleSelect}>
+        <select className="select" value={selected} onChange={handlSelect}>
           {options.map((option) => (
             <option key={option.value} value={option.value}>
               {option.text}
